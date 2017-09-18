@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /**
  * Created by Ioana on 2017-09-13.
  */
@@ -29,6 +30,7 @@ public class Insula {
             }
         }
     }
+
     public static String plaja() {
         System.out.println("Esti pe plaja. La est e epava. La vest vezi o coliba. La sud ai marea.");
         System.out.println("Ce alegi?");
@@ -38,15 +40,21 @@ public class Insula {
         Scanner scanner = new Scanner(System.in);
         int alegere = scanner.nextInt();
         String optiune = "plaja";
-        switch (alegere){
-            case 1: optiune = "epava"; break;
-            case 2: optiune = "coliba"; break;
-            case 3: optiune = "pierdut";
+        switch (alegere) {
+            case 1:
+                optiune = "epava";
+                break;
+            case 2:
+                optiune = "coliba";
+                break;
+            case 3:
+                optiune = "pierdut";
                 System.out.println("Ai intrat in mare si din pacate ai iesit din joc");
                 break;
         }
         return optiune;
     }
+
     public static String epava() {
         System.out.println("Ai ajuns la vaporul cu care ai calatorit. La vest e plaja.");
         System.out.println("Vaporul este stricat.");
@@ -58,15 +66,21 @@ public class Insula {
         int alegere = scanner.nextInt();
         String optiune = "epava";
         switch (alegere) {
-            case 1: optiune = "plaja"; break;
-            case 2: optiune = "castigat";
+            case 1:
+                optiune = "plaja";
+                break;
+            case 2:
+                optiune = "castigat";
                 System.out.println("Ai reusit sa repari vaporul. Te-ai intors acasa. Ai castigat!!!!");
                 break;
-            case 3: optiune = "pierdut";
-                System.out.println("Ai intrat in mare si din pacate ai iesit din joc"); break;
+            case 3:
+                optiune = "pierdut";
+                System.out.println("Ai intrat in mare si din pacate ai iesit din joc");
+                break;
         }
         return optiune;
     }
+
     public static String coliba() {
         System.out.println("Ai ajuns la o coliba. In spate sta un mos. La est ai plaja.");
         System.out.println("Ce alegi?");
@@ -77,13 +91,18 @@ public class Insula {
         int alegere = scanner.nextInt();
         String optiune = "coliba";
         switch (alegere) {
-            case 1: optiune = "castigat";
+            case 1:
+                optiune = "castigat";
                 System.out.println("Mosul are un vaporas pe partea opusa a insulei. Te duce pana la portul cel mai apropiat.");
                 System.out.println("Ai reusit sa te intorci acasa! Felicitari! Ai castigat!!!");
                 break;
-            case 2: optiune = "plaja"; break;
-            case 3: optiune = "pierdut";
-                System.out.println("Ai intrat in mare si ai iesit din joc!"); break;
+            case 2:
+                optiune = "plaja";
+                break;
+            case 3:
+                optiune = "pierdut";
+                System.out.println("Ai intrat in mare si ai iesit din joc!");
+                break;
         }
         return optiune;
     }
